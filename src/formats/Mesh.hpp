@@ -59,7 +59,6 @@ struct Frame
 };
 
 class Pie3Level;
-class Lib3dsMesh;
 struct Mesh_exportToOBJ_InOutParams;
 
 class Mesh
@@ -68,7 +67,6 @@ class Mesh
 public:
 	Mesh();
 	Mesh(const Pie3Level& p3, float uvEps = 0.0001, float vertEps = -1);
-	Mesh(const Lib3dsMesh& mesh3ds);
 	virtual ~Mesh();
 
 	static Pie3Level backConvert(const Mesh& wzmMesh);
@@ -82,8 +80,6 @@ public:
 					   const std::vector<OBJUV>&	uvArray);
 
 	std::stringstream* exportToOBJ(const Mesh_exportToOBJ_InOutParams& params) const;
-
-	virtual operator Lib3dsMesh*() const;
 
 	std::string getName() const;
 	void setName(const std::string& name);

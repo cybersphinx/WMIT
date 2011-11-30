@@ -102,8 +102,8 @@ CONFIG(debug, debug|release) {
     QMAKE_CXXFLAGS += -std=c++0x
     DEFINES += CPP0X_AVAILABLE
 }
-    
-LIBS += -l3ds -lm
+
+LIBS += -lm
 
 RESOURCES += \
     resources.qrc
