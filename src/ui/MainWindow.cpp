@@ -165,6 +165,7 @@ bool MainWindow::loadModel(const QString& file, WZM& model)
 			if (read_success)
 				model = WZM(p3);
 		}
+		model.reverseWinding(-1);
 	}
 
 	return read_success;
@@ -341,9 +342,11 @@ void MainWindow::on_actionSave_As_triggered()
 	else //if(type == WMIT_FT_PIE)
 	{
 		out.open(nfo.absoluteFilePath().toLocal8Bit().constData());
+		m_model.reverseWinding(-1);
 		Pie3Model p3 = m_model;
 		Pie2Model p2 = p3;
 		p2.write(out);
+		m_model.reverseWinding(-1);
 	}
 }
 
