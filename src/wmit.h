@@ -12,6 +12,9 @@
 #define WMIT_SHADER_PIE3_DEFPATH_VERT ":/data/shaders/pie3.vert"
 #define WMIT_SHADER_PIE3_DEFPATH_FRAG ":/data/shaders/pie3.frag"
 
+#define WMIT_SHADER_TCMASK_DEFPATH_VERT ":/data/shaders/tcmask.vert"
+#define WMIT_SHADER_TCMASK_DEFPATH_FRAG ":/data/shaders/tcmask.frag"
+
 #define WMIT_SHADER_PIE3_USERFILE_VERT "pie3.vert"
 #define WMIT_SHADER_PIE3_USERFILE_FRAG "pie3.frag"
 

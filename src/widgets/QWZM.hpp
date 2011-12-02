@@ -32,7 +32,7 @@
 #include "IGLTexturedRenderable.hpp"
 #include "IGLShaderRenderable.h"
 
-enum wz_shader_type_t {WZ_SHADER_NONE = 0, WZ_SHADER_PIE3, WZ_SHADER_PIE3_USER,
+enum wz_shader_type_t {WZ_SHADER_NONE = 0, WZ_SHADER_PIE3, WZ_SHADER_PIE3_USER, WZ_SHADER_TCMASK,
 		       WZ_SHADER__LAST, WZ_SHADER__FIRST = WZ_SHADER_NONE};
 
 class Pie3Model;

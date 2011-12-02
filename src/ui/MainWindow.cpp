@@ -378,6 +378,10 @@ void MainWindow::_on_viewerInitialized()
 				pathvert = WMIT_SHADER_PIE3_USERFILE_VERT;
 				pathfrag = WMIT_SHADER_PIE3_USERFILE_FRAG;
 				break;
+			case WZ_SHADER_TCMASK:
+				pathvert = WMIT_SHADER_TCMASK_DEFPATH_VERT;
+				pathfrag = WMIT_SHADER_TCMASK_DEFPATH_FRAG;
+				break;
 			default:
 				break;
 			}
@@ -410,7 +414,9 @@ void MainWindow::_on_viewerInitialized()
 
 	if (shaderGroup->actions().size())
 	{
-		shaderGroup->actions().at(shaderGroup->actions().size() - 1)->activate(QAction::Trigger);
+		const int num = shaderGroup->actions().size();
+		shaderGroup->actions().at(num - 1)->activate(QAction::Trigger);
+		_on_shaderActionTriggered(num - 1);
 	}
 }
 
